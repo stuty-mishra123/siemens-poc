@@ -21,7 +21,7 @@
       <button (click)="moveToList1()"> Delete</button>
     </div>
   </div>
-  <div class="content-div">
+  <div class="content-div girl">
     <ul class="list">
       <li *ngFor="let listData2 of List2; let i=index"  [style.background-color] = "listData2.selected ? 'grey' : 'White'" (click)="listData2.selected=!listData2.selected; selectList2Data(listData2)">
         <span class="badge">{{listData2.name}}</span> 
