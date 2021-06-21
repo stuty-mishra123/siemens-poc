@@ -1,0 +1,28 @@
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <span>Delete from</span>
+    <form name="form">
+    <div class="options">
+      <div>
+        <input type="radio" id="list1" name="delete_radio" value="list1" [(ngModel)]="modelRadio">
+        <label for="lis1"> List 1</label>
+       </div>
+      <div>
+        <input type="radio" id="list2" name="delete_radio" value="list2" [(ngModel)]="modelRadio">
+        <label for="lis2"> List 2</label>
+      </div>
+      <div>
+        <input type="radio" id="list2" name="delete_radio" value="both" [(ngModel)]="modelRadio">
+        <label for="lis2"> List 1 and 2</label>
+      </div>
+    </div>
+    <div class="button">
+      <button (click)="delete(modelRadio)">
+        close 
+      </button>
+    </div>
+  </form>
+  </div>
+
+</div>

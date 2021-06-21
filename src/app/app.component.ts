@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LIST1 } from './mock-data';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +13,9 @@ export class AppComponent {
   selectedData: Array<any>= [];
   List2 : Array<any> = [];
   selectedData2: Array<any> = [];
+  showModal : boolean = false;
+
+ 
 
   selectList1Data(data){
     this.selectedData.push(data);
@@ -41,5 +45,30 @@ export class AppComponent {
     });
 
     this.selectedData2 = [];
+  }
+  showModalFn(){
+    this.showModal = !this.showModal;
+  }
+
+  delItemFn(ev){
+   if(ev === "list1"){
+    this.list1 = this.list1.filter(obj => {
+      return this.selectedData.indexOf(obj) < 0;
+    });
+   } else if(ev === "list2"){
+    this.List2= this.List2.filter(obj => {
+      return this.selectedData2.indexOf(obj) < 0;
+    });
+   }  else if(ev === "both"){
+    this.list1 = this.list1.filter(obj => {
+      return this.selectedData.indexOf(obj) < 0;
+    });
+    this.List2= this.List2.filter(obj => {
+      return this.selectedData2.indexOf(obj) < 0;
+    });
+   } 
+   this.selectedData =[]; 
+   this.selectedData2 = [];
+   this.showModal = false;
   }
 }
