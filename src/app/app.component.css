@@ -1,0 +1,35 @@
+
+.content {
+    height: 100%;
+    width: 100%;
+    background-color:beige;
+    padding: 20px;
+    display: inline-flex;
+}
+.content-div {
+    background-color: whitesmoke;
+    width: 33%;
+    margin: 10px;
+}
+.content-div .list{
+       padding: 10px; 
+    }
+.content-div li{
+    list-style: none;
+    border: 1px solid black;
+    line-height: 30px;
+    text-align: center;
+}
+.content-div .buttons {
+    margin-top: 40%;
+    text-align: center;
+    display: inline-grid;
+   margin-left: 36%;
+}
+.content-div .buttons button {
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10%;
+
+}
